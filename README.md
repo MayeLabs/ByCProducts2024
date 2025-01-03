@@ -8,7 +8,7 @@
 
 ## Entendiendo Conceptos
 ### Desviación Estandar
-
+### Percentiles
 
 ## Desviación Estandar
 
@@ -78,3 +78,32 @@ Si es pequenho sera < 10 %
 Si es alto sera > 30 %
 
 OJO -> Se debe tomar en cuenta el contexto del dato para una mejor interpretacion
+
+
+## Percentiles - Cuartiles
+
+Dividen el conjunto de datos en 100 partes iguales mientras los cuartiles dividen los datos en 4 partes iguales
+
+1. Primer cuartil (Q1): El valor por debajo del cual esta el 25% de los datos
+2. Segundo cuartil (Q2): Es la mediana que divide los datos en dos mitades 
+3. Tercer cuartil (Q3): Es el valor por debajo del cual esta el 75%
+
+Ejemplo:
+
+Tenemos
+
+[1, 2, 3, 4, 5, 5, 6, 7, 8, 9 , 10]
+
+El Q1 seria el valor en 25% de los datos seria 3
+El Q2 seria el que esta en el 50% de los datos seria 5
+El Q3 seria el valor en el 75% 8
+
+Los percentiles seran mas especificos, 10%, 20% y 30%
+
+Que se puede hacer con ello ?
+
+1. Identificar la dispersion de los datos, como se que encuentran distribuidos, ejemplo
+    la mayoria de los datos esta entre que quartiles
+2. Detectar valores atipicos, ya que se podria observar si hay un valor mas lejos de los cuartiles
+2. Hacer una visualizacion usando el diagrama caja de bigotes o boxplot visualizando mejor la distribucion
+
