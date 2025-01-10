@@ -6,9 +6,12 @@
 1. [Entendiendo Conceptos](#entendiendo) - Desviación Estandar
 --- 
 
-## Entendiendo Conceptos
+# Entendiendo Conceptos
 ### Desviación Estandar
 ### Percentiles
+## preprocesamiento
+### Limpieza de datos
+
 
 ## Desviación Estandar
 
@@ -18,22 +21,6 @@ Como interpretarla:
 
 1. Si es baja, entonces los valores estan muy cerca de la media, los datos son consistentes
 2. Si es alta; Los valores estaran mas dispersos, hay mas variabilidad
-
-Como usarlos en el analisis ?
-
-1. Consistencia o variabilidad  
-    Al haber variabilidad se puede usar para ver que es lo que lo produce, en este dataset
-    puedo observar si la variabilidad de precios se basa en la marca
-
-2. Detectar valores atipicosDesviacion Estandar
-
-Es una medida que nos ayuda a ver que tan dispersos los datos de la media(promedio), responde
-a: Cuanto varian los datos respecto a la media ?
-
-Como interpretarla:
-
-1. Si es baja, entonces los valores estan muy cerca de la media, los datos son consistentes
-2. Si es alta; Los valores estaran mas dispersos, hay mas variabilidad, lo que que puede indicar un alta diversidad o un comportamiento inconsistente en los datos
 
 Como usarlos en el analisis ?
 
@@ -107,3 +94,29 @@ Que se puede hacer con ello ?
 2. Detectar valores atipicos, ya que se podria observar si hay un valor mas lejos de los cuartiles
 2. Hacer una visualizacion usando el diagrama caja de bigotes o boxplot visualizando mejor la distribucion
 
+## preprocesamiento
+### Limpieza de datos
+### Verificar valores únicos en columnas categóricas
+
+**Columnas categóricas**
+
+Son los que representar diferentes categorias o grupos, es decir hay un conjunto limitado de estos y no posee un significado matematico, como precio o cantidad
+
+***Como diferenciarlos:***
+
+*Categóricas*
+- Valores discretos
+- No poseen un significado matematico directo 
+
+*No categóricas*
+* Valores numericos continuos u ordinales
+* Valores que representen magnitudes
+
+
+>[!NOTE]
+>
+> El objetivo es normalizar los valores categoricos y evitar problemas identificando:
+>
+> 1. Posibles inconsistencias, viendo si hay irregularidades 
+> 2. Errores tipograficos
+> 3. Categorias innecesarias
