@@ -132,12 +132,14 @@ Los datos categoricos poseen un tipo y naturaleza, los tipos principales son:
     Pueden permitir el uso de mediana o la moda como medidas de tendencia central
 
 
-> [!TIP] Regla práctica para decidir
+> [!TIP]
+> Regla práctica para decidir
 >
 > Preguntarse:
 > ***¿Tiene sentido establecer un orden natural entre las categorías en este contexto?***
-> Si NO → Es nominal.
-> Si SÍ → Es ordinal.
+> - Si NO → Es nominal.
+> - Si SÍ → Es ordinal.
+> 
 > Si no se esta analizando ninguna jerarquia explícita entre las categorías, lo más adecuado sería considerarlas nominales. 
 
 
@@ -149,12 +151,13 @@ Segun el tipo de datos categorico, se asigna un encode, para
 > [!WARNING]  
 > ***One-Hot*** puede ser simple y efectiva, pero se puede crear una gran cantidad de caracteristicas y aumentar la dimensionalidad de los datos
 >  Lo que puede traer problemas como *el sobreajustes*,  *la dispersión* y *la complejidad computacional*.
+> 
 > ***Label encoding*** Puede introducir una falsa sensacion de magnitud (distancia entre categorias) tener precaucion y aplicar técnicas de escalado o normalización si es necesario.
 
 
 "Existen otros métodos para convertir datos categóricos en datos numéricos, como la codificación binaria, la codificación de frecuencia, la codificación de destino o la incrustación. "
 
-*** ¿ Por que es importante transformarlas ? ***
+***¿ Por que es importante transformarlas ?***
 La mayoria de los modelos estadisticos y algoritmos de aprendizaje estan disenados para trabajar con datos numericos.
 
 
@@ -170,7 +173,7 @@ La mayoria de los modelos estadisticos y algoritmos de aprendizaje estan disenad
  Las variables categóricas son esenciales para problemas de clasificación, reconocimiento de patrones y para proporcionar información matizada en diversos contextos analíticos, desde estadísticas descriptivas hasta modelos avanzados de aprendizaje automático.
 
 
- *** Cuando transformar los datos categoricos? ***
+ ***¿Cuando transformar los datos categoricos?***
  1. Se desee usar modelos de aprendizaje automatico
  2. Se desea reducir la complejidad: Categorias redundantes o demasiado niveles
  3. Preparacion para visualizacion o metricas: En formato numerico es mas sencillo de visualizas.
