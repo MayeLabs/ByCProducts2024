@@ -181,7 +181,7 @@ La mayoria de los modelos estadisticos y algoritmos de aprendizaje estan disenad
 
 #### ***Convertir categoricos - Encoding One-Hot y Label Encoding***
 
-One-Hot agrega columnas
+***One-Hot (agrega columnas)***
 
 ```python
 color_encoded = pd.get_dummies(df['Color'], prefix='Color')
@@ -203,6 +203,35 @@ df_new = pd.concat([df, color_encoded], axis=1)
 |Rojo	|1	        |0	        |0           |
 |Azul	|0	        |1	        |0           |
 |Verde	|0	        |0	        |1           |
+
+
+***Label encode***
+
+**Antes**
+
+| Freq |
+|-----------|
+| Weekly    |
+| Monthly   |
+| Daily     |
+
+1. Mapeando
+
+```python
+order = {'Monthly':0, 'Weekly':1, 'Daily':2}
+df['Freq_encoded'] = df['Freq'].map(order)
+df.head()
+```
+
+**Despues con Mapeo**
+
+| Freq      | Freq_encoded |
+|-----------|--------------| 
+| Weekly    | 1            |
+| Monthly   | 0            |
+| Daily     | 2            |
+
+
 
 
 
