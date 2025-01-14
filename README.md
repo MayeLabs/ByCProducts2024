@@ -122,7 +122,7 @@ Son los que representar diferentes categorias o grupos, es decir hay un conjunto
 > 3. Categorias innecesarias
 
 
-***Convertir datos categoricos***
+#### ***Convertir datos categoricos***
 
 Los datos categoricos poseen un tipo y naturaleza, los tipos principales son:
 1. Nominales: No poseen un orden o clasificacion, es decir siguen una secuencia o clasificación ej: Genero, color.
@@ -177,6 +177,37 @@ La mayoria de los modelos estadisticos y algoritmos de aprendizaje estan disenad
  1. Se desee usar modelos de aprendizaje automatico
  2. Se desea reducir la complejidad: Categorias redundantes o demasiado niveles
  3. Preparacion para visualizacion o metricas: En formato numerico es mas sencillo de visualizas.
+
+
+#### ***Convertir categoricos - Encoding One-Hot y Label Encoding***
+
+One-Hot agrega columnas
+
+```python
+color_encoded = pd.get_dummies(df['Color'], prefix='Color')
+df_new = pd.concat([df, color_encoded], axis=1)
+```
+
+**Antes**
+
+| Color |
+|-------|
+| Rojo  |
+| Azul  |
+| Verde |
+
+**Despues**
+
+|Color	|Color_Rojo	|Color_Azul	|Color_Verde |
+|-------|-----------|-----------|------------|
+|Rojo	|1	        |0	        |0           |
+|Azul	|0	        |1	        |0           |
+|Verde	|0	        |0	        |1           |
+
+
+
+
+
 
 
 
