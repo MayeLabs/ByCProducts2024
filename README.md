@@ -232,9 +232,22 @@ df.head()
 | Daily     | 2            |
 
 
+2. Importando LabelEncoder de sklearn 
 
+```python
+import sklearn.preprocessing import LabelEncoder
+freq_label_encoder = LabelEncoder()
+df['Freq_encoded'] = freq_label_encoder.fit_transform(df['Freq'])
+df.head()
+```
 
+**Despues con LabelEncoder**
 
+| Freq      | Freq_encoded |
+|-----------|--------------| 
+| Weekly    | 0            |
+| Monthly   | 1            |
+| Daily     | 2            |
 
 
 
