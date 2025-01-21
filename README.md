@@ -97,7 +97,7 @@ Que se puede hacer con ello ?
 ## preprocesamiento
 ### Limpieza de datos
 ### Verificar valores únicos en columnas categóricas
-
+### Normalización de texto
 **Columnas categóricas**
 
 Son los que representar diferentes categorias o grupos, es decir hay un conjunto limitado de estos y no posee un significado matematico, como precio o cantidad
@@ -248,6 +248,37 @@ df.head()
 | Weekly    | 0            |
 | Monthly   | 1            |
 | Daily     | 2            |
+
+
+
+#### Normalización de texto
+
+El objetivo es tranformar el texto en un formato estandarizado para facilitar su analisis, comparacion y procesamiento.
+
+ ***¿Que incluye?***
+ - Conversion a minuscula: Pasarlas al mismo formato. *Ej: Texto  texto.*
+ - Eliminación de caracteres no deseados: Remover caracteres especiales irrelevantes. *Ej: hello! -> hello.*
+ - Eliminación de espacios extras: Quitar espacios extras o redundantes. *Ej: Hola    mundo -> hola mundo.*
+ - Lematizacion: Reducir palabras a su forma base. *Ej: Corriendo -> correr.*
+ - Sremming: Recortar palabra a su raiz. *Ej: Corriendo -> corr o Rapidamente -> rapid.*
+ - Eliminación de palabras vacias: Quitar palabras sin singnificado. *Ej: el gato esta en casa -> gato casa.*
+ - Sustitucion de abreviaturas: Expandir abreviaturas. *Ej: EE.UU. -> Estados Unidos.*
+ - Extracion de informacion: Remover unidades de medida, valores irrelevantes; *Ej: 250ml -> 250*
+ - Correcion de errores tipográficos.
+
+
+ ***¿Por que es importante?***
+ - Reduce la variabilidad.
+ - Reduce el ruido y hace mas facil extraer patrones
+ - Facilita la agrupacion, clasificacion y analisis.
+ - Permite que los modelos procesen la información de manera coherente.
+ - Ayuda a evitar resultados inexactos o inconsistente por las diferencias en el formato de texto.
+
+
+"La normalización es esencial siempre que se necesite una entrada de texto estandarizada"
+
+
+
 
 
 
