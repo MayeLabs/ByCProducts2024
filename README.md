@@ -278,9 +278,8 @@ El objetivo es tranformar el texto en un formato estandarizado para facilitar su
 "La normalización es esencial siempre que se necesite una entrada de texto estandarizada"
 
 
-
-
-
+> [!WARNING]  
+> Es recomendable siempre realizar primero la normalización antes de la identificación y el encoding de las variables categóricas.
 
 
 
