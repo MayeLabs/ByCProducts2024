@@ -263,7 +263,7 @@ El objetivo es tranformar el texto en un formato estandarizado para facilitar su
  - Sremming: Recortar palabra a su raiz. *Ej: Corriendo -> corr o Rapidamente -> rapid.*
  - Eliminación de palabras vacias: Quitar palabras sin singnificado. *Ej: el gato esta en casa -> gato casa.*
  - Sustitucion de abreviaturas: Expandir abreviaturas. *Ej: EE.UU. -> Estados Unidos.*
- - Extracion de informacion: Remover unidades de medida, valores irrelevantes; *Ej: 250ml -> 250*
+ - Extración de informacion: Remover unidades de medida, valores irrelevantes; *Ej: 250ml -> 250*
  - Correcion de errores tipográficos.
 
 
