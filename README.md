@@ -1,103 +1,120 @@
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
  
+
 # Índice
 
-1. [Entendiendo Conceptos](#entendiendo) - Desviación Estandar
---- 
+### [Entendiendo conceptos](#entendiendo-conceptos)  
+
+
+[Estadística descriptiva - Dada por df.describe()](#estadística-descriptiva)
+
+- [Desviación Estandar](#desviación-estandar)  
+    - Como interpretarla
+- [Percentiles - Cuartiles](#percentiles---cuartiles)
+    - ¿ Que se puede obtener de los cuartiles ?    
+
+[Preprocesamiento](#preprocesamiento)
+
+[Análisis exploratorio de datos (EDA) ](#análisis-exploratorio-de-datos(eda))
+- [Tipos de EDA](#tipos-de-eda)
+
 
 # Entendiendo Conceptos
-### Desviación Estandar
-### Percentiles
-## preprocesamiento
-### Limpieza de datos
+
+## Estadística descriptiva
+La estadística descriptiva se obtiene de la inspeccion inicial, donde df.describe() es uno de los protagonistas, aunque al visualizar los valores dados no se usan para obtener conclusionessi muestra un abreboca de los datos del dataset, acontinuacion conceptos y como interpretar lo obtenido de df.describe()
+
+### ***Desviación Estandar***
+
+Es una medida que nos ayuda a ver que tan dispersos estan los datos de la media(promedio), respondiendo a: 
+
+> **¿ Cuanto varian los datos respecto a la media ?**
+
+*Como interpretarla:*  
+
+1. Si es baja -> Los valores estan muy cerca de la media.  
+    Los datos son consistentes
+2. Si es alta -> Los valores estaran mas dispersos.  
+    Hay mas variabilidad
+
+**¿ Como usarla en el analisis ?**
+
+1. *Consistencia o variabilidad*
+    Al haber variabilidad se podria usar para observar que es lo que la produce.  
+    Ej: Observar si la variabilidad de los precios se basa en la marca  
+
+2. *Detectar valores atipicos*
+    Un valor atipico: Es un valor que se encuentra muy alejado del resto,es decir, esta mas lejos de la media en comparacion de otros valores. 
+    > No siguen la tendencia general de los datos  
+
+    **¿ Como diferencio el minimo de valores atipicos ?**
+
+    Un valor atipico puede no ser precisamente el valor minimo de los datos, sino un valor que se encuentre fuera del rango esperado de los datos ya sean por encima o por debajo de la media.
 
 
-## Desviación Estandar
+    > El minimo es un valor mas bajo del conjunto de los datos, **puede o no ser un valor atipico** dependiendo de la distribucion de los datos
 
-Es una medida que nos ayuda a ver que tan dispersos los datos de la media(promedio), responde a: Cuanto varian los datos respecto a la media ?
+    *¿ cuando se considera y como detectar valores atipicos ?*
 
-Como interpretarla:  
+    Se considera  valor atipico cuando esta a 3 desviaciones estandar de la media, ya sea por encima o por debajo.
 
-1. Si es baja, entonces los valores estan muy cerca de la media, los datos son consistentes
-2. Si es alta; Los valores estaran mas dispersos, hay mas variabilidad
+    Un valor minimo puede ser un valor atipico si esta por debajo de media - 3 * desviacion_estandar
 
-Como usarlos en el analisis ?
+    Un valor maximo puede ser un valor atipico si esta por encima de media + 3 * desviacion_estandar
 
-1. Consistencia o variabilidad  
-    Al haber variabilidad se puede usar para ver que es lo que lo produce, en este dataset
-    puedo observar si la variabilidad de precios se basa en la marca
-
-2. Detectar valores atipicos
-    Un valor atipico es un valor que se encuentra muy alejado del resto, esta mas lejos de la media que 
-    otros valores, en otras palabras quiere decir que no siguen la tendencia general de los datos
-
-    Un valor se considera atipico, cuando esta 3 desviaciones estandar de la media, ya sea por encima o por debajo
-
-    Como diferencio el minimo de valores atipicos ?
-
-        Un valor atipico puede no ser precisamente el valor minimo de los datos, sino un valor que
-        se encuentre fuera del rango esperado de los datos ya sean por encima o por debajo de la media
-
-        El minimo es un valor mas bajo del conjunto de los datos, puede o no ser un valor atipicos dependiendo
-        de la distribucion de los datos
-
-        Como se como detectarlos los valores atipicos ?
-
-            Un valor minimo puede ser un valor atipico si esta por debajo de media - 3 * desviacion_estandar
-
-            Un valor maximo puede ser un valor atipico si esta por encima de media + 3 * desviacion_estandar
-
-
-
-3. Comparar columnas
-    El objetivo es ver la variabilidad entre diferentes columnas, para ver si siguen patrones similares
-
-
+3. *Comparar columnas*  
+    El objetivo es ver la variabilidad entre diferentes columnas, para visualizar si siguen patrones similares
 
 Como saber que tan grande o pequenha es, se hace a traves de la proporcion de la desviacion estandar con respecto a la media, la idea es comparar la desviacion estandar con la media se puede hacer uso de:
 
-Calculo del porcentaje Relativo
+> [!NOTE]  
+> *Calculo del porcentaje Relativo*
+>
+> Porcentaje relativo = (Desviacion estandar/Media) * 100
+>
+> Si es pequenho sera < 10 %  
+> Si es alto sera > 30 %
+> 
+> :eyes: :heavy_exclamation_mark:
+>> Se debe tomar en cuenta el contexto del dato para una mejor interpretacion  
 
-Porcentaje relativo = (Desviacion estandar/Media) * 100
 
-Si es pequenho sera < 10 %
-Si es alto sera > 30 %
+### Percentiles - Cuartiles
 
-OJO -> Se debe tomar en cuenta el contexto del dato para una mejor interpretacion
-
-
-## Percentiles - Cuartiles
-
-Dividen el conjunto de datos en 100 partes iguales mientras los cuartiles dividen los datos en 4 partes iguales
+Los percentiles dividen el conjunto de datos en 100 partes iguales mientras los cuartiles dividen los datos en 4 partes iguales:
 
 1. Primer cuartil (Q1): El valor por debajo del cual esta el 25% de los datos
 2. Segundo cuartil (Q2): Es la mediana que divide los datos en dos mitades 
 3. Tercer cuartil (Q3): Es el valor por debajo del cual esta el 75%
 
-Ejemplo:
-
-Tenemos
-
+_________________
+**Ejemplo**   
+Tenemos:  
 [1, 2, 3, 4, 5, 5, 6, 7, 8, 9 , 10]
 
-El Q1 seria el valor en 25% de los datos seria 3
-El Q2 seria el que esta en el 50% de los datos seria 5
-El Q3 seria el valor en el 75% 8
+- El Q1 seria el valor en 25% de los datos seria 3
+- El Q2 seria el que esta en el 50% de los datos seria 5
+- El Q3 seria el valor en el 75% 8
+_________________
 
-Los percentiles seran mas especificos, 10%, 20% y 30%
+> Los percentiles seran mas especificos, 10%, 20% y 30%
+>  
 
-Que se puede hacer con ello ?
+**¿ Que se puede obtener de los cuartiles ?**
 
-1. Identificar la dispersion de los datos, como se que encuentran distribuidos, ejemplo
-    la mayoria de los datos esta entre que quartiles
-2. Detectar valores atipicos, ya que se podria observar si hay un valor mas lejos de los cuartiles
-2. Hacer una visualizacion usando el diagrama caja de bigotes o boxplot visualizando mejor la distribucion
+1. Identificar la dispersion de los datos, respondiendo a como se que encuentran distribuidos, ejemplo:  
+    La mayoria de los datos entre que quartiles estan
 
-## preprocesamiento
+2. Detectar valores atipicos, Observando si hay un valor mas lejos de los cuartiles
+2. Hacer una visualizacion usando el diagrama caja de bigotes o boxplot para observar la distribucion
+
+## Preprocesamiento
+
 ### Limpieza de datos
 ### Verificar valores únicos en columnas categóricas
 ### Normalización de texto
+
 **Columnas categóricas**
 
 Son los que representar diferentes categorias o grupos, es decir hay un conjunto limitado de estos y no posee un significado matematico, como precio o cantidad
@@ -277,10 +294,48 @@ El objetivo es tranformar el texto en un formato estandarizado para facilitar su
 
 "La normalización es esencial siempre que se necesite una entrada de texto estandarizada"
 
-
 > [!WARNING]  
 > Es recomendable siempre realizar primero la normalización antes de la identificación y el encoding de las variables categóricas.
 
+## Análisis exploratorio de datos (EDA)
 
+> :memo: Responde que tengo y que me dicen los datos.  
 
+Conciste en analisar e investigar el conjunto de datos usando a menudo metodos de visualizacion de datos
 
+Se usa principalmente para observar que pueden revelar los datos y proporciona una mejor comprension de las variables del conjunto de datos.
+
+*¿ Por que es importante hacer EDA ?*
+
+> Extrae conocimientos
+- Evita suposiciones.
+- Identificar errores obvios.
+- Comprender e identificar patrones.
+- Encontrar relaciones interesantes entre variables.
+- Confirma si las preguntas son correctas.
+
+### Tipos de EDA
+- Univariante no gráfico:
+    - Concisten en una sola variable
+    - Obj: Describir los datos y encontrar patrones
+    Como se puede conseguir patrones si conciste en una sola variable ?
+
+- Univariante gráfico:
+    - Incluye: 
+        - Diagramas de tallos
+        -  Histogramas
+        -  Diagrama de cajas 
+- Multivariante no gráfico:
+    - Concisten en mas de una variable
+    - Relacion de entre dos datos y mas
+    - Usando: Tabulaciones cruzadas o estadisticas
+    Que son tabulaciones cruzadas ?
+
+- Multivariante gráfico:
+    - Usan graficas para mostrar relaciones entre dos o mas variables.
+    - Incluye:
+        - Diagrama de barras
+        - Diagramas de dispersion
+        - Grafico multivariante
+        - Grafico de burbujas
+        - Mapa de calor
