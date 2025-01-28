@@ -329,7 +329,7 @@ Se usa principalmente para observar que pueden revelar los datos y proporciona u
     - Concisten en mas de una variable
     - Relacion de entre dos datos y mas
     - Usando: Tabulaciones cruzadas o estadisticas
-    Que son tabulaciones cruzadas ?
+    
 
 - Multivariante gráfico:
     - Usan graficas para mostrar relaciones entre dos o mas variables.
@@ -339,3 +339,15 @@ Se usa principalmente para observar que pueden revelar los datos y proporciona u
         - Grafico multivariante
         - Grafico de burbujas
         - Mapa de calor
+
+**¿ Que son tabulaciones cruzadas ?**  
+Las tabulaciones cruzadas son las tablas que muestran relacion entre dos variables categóricas al contar la frecuencia con que ocurren combinaciones especificas.
+
+_________________
+**Ejemplo**   
+
+| Genero    |	Shampoo |	Crema|	Jabón|
+|-----------|-----------|--------|-------| 
+| Femenino	|   15	    |     20 |  10   |
+| Masculino	|   10	    |     5	 |  30   |
+_________________
