@@ -351,3 +351,10 @@ _________________
 | Femenino	|   15	    |     20 |  10   |
 | Masculino	|   10	    |     5	 |  30   |
 _________________
+
+
+**¿ Como dar contexto y profundidad al analisis ?** 
+1. Añadir contexto sobre el ranking.
+2. Comparar las dieferencias entre el top y las demas.
+3. Hablar sobre el impacto de los datos: Responde a que podria significar la diferencia
+4. Hacer preguntas reflexivas: Que inviten al analisis
