@@ -52,14 +52,43 @@ with no additional corrections needed.
   encoded using One-Hot Encoding.
 
 
+## Key Findings — Exploratory Data Analysis (EDA)
+
+**Top Brands:** Milk Makeup leads with 426 products, followed closely by 
+Make Up For Ever (414) and Kiehl's (411), with minimal differences between them.
+
+**Top Categories:** Serum dominates with 710 products, followed by Mascara (674) 
+and Face Oil (671). Serum's position may reflect its strong presence in social 
+media and advertising campaigns prior to 2025. Lip Gloss ranks last (571), 
+possibly linked to current makeup trends.
+
+**Usage Frequency — Critical Finding ⚠️:** Although 'Occasional' appears as 
+the most common frequency, cross-analysis shows that all categories have nearly 
+identical distributions across all frequencies (~140–180 per combination). 
+Products like Serum, expected to be Daily use, show no clear pattern. 
+This suggests the dataset was likely artificially generated or balanced, 
+and does not reflect real consumer behavior.
+
+**Skin Type:** Combination skin is the most represented, though differences 
+between skin types are minimal.
+
+**Country of Origin:** Italy produces the highest number of products, 
+though again with small differences across countries.
+
+**Top Ingredients:** The most common ingredients — Retinol, Glycerin, 
+Vitamin C, Salicylic Acid and Shea Butter — all have strong scientific 
+backing and wide presence in the dermatological market.
+
+**Gender Distribution:** Products are distributed almost equally across 
+all gender targets — Male (5,017), Female (5,002) and Unisex (4,981) — 
+suggesting the beauty market offers a proportional range for all genders.
+
 ## Project Structure
 
 - ByCProducts2024
   - data
     - most_used_beauty_cosmetics_products_extended.csvc
     - cleaned_most_used_beauty_cosmetics_products_extended.csv
-  - img
-    - most_used_beauty_cosmetics_products_extended.csvc
   - notebooks
     - data_cleaning.ipynb
     - EDA.ipynb
