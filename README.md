@@ -1,6 +1,7 @@
 # Most Used Beauty Cosmetics Products 2024 - Data Cleaning and EDA (Exploratory Data Analysis)
 
 ![Personal Project](https://img.shields.io/badge/TYPE-PERSONAL%20PROJECT-blue)
+![Status](https://img.shields.io/badge/STATUS-FINISHED-green)
 
 ## Description
 
@@ -87,7 +88,7 @@ suggesting the beauty market offers a proportional range for all genders.
 
 - ByCProducts2024
   - data
-    - most_used_beauty_cosmetics_products_extended.csvc
+    - most_used_beauty_cosmetics_products_extended.csv
     - cleaned_most_used_beauty_cosmetics_products_extended.csv
   - notebooks
     - data_cleaning.ipynb
@@ -106,6 +107,6 @@ suggesting the beauty market offers a proportional range for all genders.
 
 ```bash
 git clone https://github.com/MayeLabs/ByCProducts2024.git
-cd retail-trends-dataqa
+cd ByCProducts2024
 jupyter notebook
 ```
